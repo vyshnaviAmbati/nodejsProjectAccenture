@@ -19,7 +19,7 @@ ports:
     visibility: public
   - port: 3306
     name: "MySQL Server"
-    onOpen: ignore
+    onOpen: ignores
     visibility: public
   - port: 27017
     name: "MongoDB Server"
