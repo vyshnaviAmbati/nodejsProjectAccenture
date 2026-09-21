@@ -2,6 +2,16 @@
 EXPRESS 4.17 SPA
 Hello
 
+## Image Resizer API
+
+Put the Himalayas image from Downloads in `assets/originals`, for example as `himalayas.jpg`.
+
+Start the app with `npm start`, then request a thumbnail:
+
+`GET http://localhost:8081/api/images?filename=himalayas.jpg&width=800&height=500`
+
+Use `npm test`, `npm run build`, and `npm run lint` to validate the project.
+
 IMPORTANT NOTES:
 
     1. Make sure you follow the steps mentioned under "PROJECT START STEPS" and ensure that the steps execute successfully. 

@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Himalayas Image Resizer
+  form(action='/' method='get')
+    label(for='width') Width
+    input#width(type='number' name='width' min='1' max='5000' value=width required)
+    label(for='height') Height
+    input#height(type='number' name='height' min='1' max='5000' value=height required)
+    button(type='submit') Resize image
+  img(src='/api/images?filename=himalayas.jpg&width=' + width + '&height=' + height, alt='Himalayas', width=width, height=height)
