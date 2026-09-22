@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "node --test",
-    "build": "node --check app.js && node --check routes/api.js && node --check utils/image-resizer.js",
-    "lint": "node --check app.js && node --check routes/api.js && node --check utils/image-resizer.js"
+    "start": "node ./dist/bin/www.js",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "build": "tsc",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -26,6 +26,14 @@
     }
   },
   "devDependencies": {
-    "supertest": "^7.2.2"
+    "@types/cookie-parser": "^1.4.10",
+    "@types/debug": "^4.1.13",
+    "@types/express": "^5.0.3",
+    "@types/http-errors": "^2.0.4",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.5.2",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.2.2",
+    "typescript": "^5.9.2"
   }
 }
