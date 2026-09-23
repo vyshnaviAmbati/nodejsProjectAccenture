@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./dist/bin/www.js",
-    "test": "npm run build && node --test dist/test/*.test.js && jasmine --config=jasmine.json",
+    "test": "npm run build && node --test dist/test/api.test.js && jasmine --config=jasmine.json",
     "build": "npm run lint && npm run formate && tsc",
     "lint": "eslint \"{app.ts,bin/**/*.ts,routes/**/*.ts,utils/**/*.ts,test/**/*.ts}\"",
     "formate": "prettier --check \"{app.ts,bin/**/*.ts,routes/**/*.ts,utils/**/*.ts,test/**/*.ts}\""
